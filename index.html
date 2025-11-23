@@ -3,75 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>홍길동 | 개인 포트폴리오</title>
+    <title>김지훈 | 포트폴리오</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- 상단 네비게이션 바 -->
-    <nav class="navbar">
+    <!--
+        사이트 전체를 감싸는 헤더입니다.
+        화면 상단에 고정되며, 각 섹션으로 이동하는 네비게이션 링크를 포함합니다.
+    -->
+    <header class="site-header">
         <div class="container">
-            <a href="#info" class="nav-link">기본 정보</a>
-            <a href="#career" class="nav-link">경력 및 프로젝트</a>
-            <a href="#about" class="nav-link">자기소개</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#info">기본 인적사항</a></li>
+                    <li><a href="#career">경력 및 프로젝트</a></li>
+                    <li><a href="#story">자기소개</a></li>
+                </ul>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <!-- 메인 컨텐츠 영역 -->
-    <div class="container main-content">
+    <!--
+        사이트의 주요 콘텐츠 영역입니다.
+        3개의 주요 섹션으로 구성됩니다: 기본 정보, 경력, 자기소개.
+    -->
+    <main>
+        <!--
+            SECTION 1: 기본 인적사항
+            - 상단 히어로 영역으로, 시각적인 강조를 줍니다.
+            - 개인 정보와 프로필 사진을 포함합니다.
+        -->
+        <section id="info" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-text">
+                    <h1>끊임없이 배우고 성장하는<br>신입 개발자 김지훈입니다.</h1>
+                    <p class="tagline">기본에 충실하며, 동료와 함께 최고의 결과를 만들어냅니다.</p>
 
-        <!-- 섹션 1: 기본 인적 사항 -->
-        <section id="info" class="card">
-            <h1 class="section-title">기본 인적 사항</h1>
-            <div class="info-container">
-                <!-- 프로필 사진 placeholder -->
-                <div class="profile-photo-placeholder"></div>
-                <div class="info-details">
-                    <p><strong>이름:</strong> 홍길동</p>
-                    <p><strong>생년월일:</strong> 2000년 1월 1일</p>
-                    <p><strong>주소:</strong> 서울특별시</p>
-                    <p><strong>연락처:</strong> 010-1234-5678</p>
-                    <p><strong>이메일:</strong> example@email.com</p>
+                    <div class="info-card">
+                        <h2>기본 인적사항</h2>
+                        <ul>
+                            <li><strong>이름</strong><span>김지훈</span></li>
+                            <li><strong>생년월일</strong><span>2000. 01. 01.</span></li>
+                            <li><strong>주소</strong><span>서울특별시 중구</span></li>
+                            <li><strong>전화번호</strong><span>010-1234-5678</span></li>
+                            <li><strong>이메일</strong><span>example@email.com</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/profile-placeholder.jpg" alt="증명사진">
                 </div>
             </div>
         </section>
 
-        <!-- 섹션 2: 경력 및 프로젝트 경험 -->
-        <section id="career">
-            <h2 class="section-title">경력 및 프로젝트</h2>
-            <div class="timeline">
-                <!-- 경력/프로젝트 카드 1 -->
-                <div class="card experience-card">
-                    <h3>개인 포트폴리오 웹사이트 개발</h3>
-                    <p class="experience-meta">개인 프로젝트 | 2025.10 - 2025.11</p>
-                    <p>HTML, CSS, JavaScript를 사용하여 반응형 개인 소개 페이지를 제작했습니다. 웹 디자인의 기본 원칙을 적용하여 사용자 경험을 향상시키고, 시맨틱 HTML을 통해 웹 접근성을 고려했습니다.</p>
-                </div>
-                <!-- 경력/프로젝트 카드 2 -->
-                <div class="card experience-card">
-                    <h3>팀 프로젝트 - 일정 관리 앱</h3>
-                    <p class="experience-meta">팀 'Soomgo' | 2025.08 - 2025.09</p>
-                    <p>효율적인 시간 관리를 돕는 웹 애플리케이션을 기획하고 프론트엔드 개발에 참여했습니다. 팀원들과의 원활한 소통을 통해 문제를 해결하고, Git을 사용한 협업 워크플로우를 익혔습니다.</p>
+        <!--
+            SECTION 2: 경력 및 프로젝트
+            - 주요 경험을 카드 형태로 보여주는 섹션입니다.
+            - 데스크탑에서는 여러 열로, 모바일에서는 한 열로 표시됩니다.
+        -->
+        <section id="career" class="career-section">
+            <div class="container">
+                <h2 class="section-title">경력 및 프로젝트</h2>
+                <div class="career-grid">
+                    <div class="career-card">
+                        <h3>개인 포트폴리오 사이트 개발</h3>
+                        <h4>개인 프로젝트</h4>
+                        <p class="period">2025.10 - 2025.11</p>
+                        <p>
+                            HTML과 CSS의 기본기를 다지고, 웹 디자인 원칙을 적용하여 반응형 개인 소개 웹사이트를 구축했습니다.
+                            이를 통해 웹 표준의 중요성을 이해하고 사용자 친화적인 UI/UX 설계 능력을 길렀습니다.
+                        </p>
+                    </div>
+                    <div class="career-card">
+                        <h3>미니 블로그 서비스 개발</h3>
+                        <h4>팀 프로젝트 (4인)</h4>
+                        <p class="period">2025.07 - 2025.08</p>
+                        <p>
+                            Python Flask 프레임워크를 사용하여 간단한 CRUD 기능이 있는 블로그 서비스를 개발했습니다.
+                            Git을 이용한 협업 방식과 데이터베이스 설계 기초를 학습하며 팀워크의 중요성을 깨달았습니다.
+                        </p>
+                    </div>
+                    <div class="career-card">
+                        <h3>알고리즘 스터디</h3>
+                        <h4>교내 스터디 그룹</h4>
+                        <p class="period">2024.03 - 현재</p>
+                        <p>
+                            매주 동료들과 함께 알고리즘 문제를 해결하고 코드 리뷰를 진행합니다.
+                            문제 해결 능력과 다양한 자료 구조에 대한 이해를 심화시켰으며, 논리적인 코드 작성 능력을 향상시켰습니다.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- 섹션 3: 자기소개 및 강점 -->
-        <section id="about">
-            <h2 class="section-title">자기소개 및 강점</h2>
-            <div class="card about-me-card">
-                <p>
-                    새로운 것을 배우고 익히는 과정에서 가장 큰 즐거움을 느끼는 개발자 지망생입니다. 저는 복잡한 문제에 직면했을 때, 이를 여러 개의 작은 단위로 나누어 차근차근 해결해 나가는 체계적인 접근 방식을 선호합니다. 이러한 과정은 단순히 기술을 습득하는 것을 넘어, 문제 해결 능력 자체를 길러준다고 믿습니다.
-                </p>
-                <p>
-                    프로젝트를 진행할 때는 '왜'라는 질문을 가장 중요하게 생각합니다. 기술을 사용하는 이유, 이 기능이 사용자에게 왜 필요한지를 끊임없이 고민하며, 이는 더 나은 결과물을 만드는 원동력이 됩니다. 동료들과 함께 의견을 나누고 서로에게 배우며 성장하는 환경을 좋아하며, 명확하고 건설적인 소통이 좋은 팀워크의 핵심이라고 생각합니다.
-                </p>
-                <p>
-                    저는 화려한 기술을 뽐내기보다, 사용자에게 실질적인 가치를 제공하고 안정적으로 동작하는 서비스를 만드는 데 더 큰 보람을 느낍니다. 꾸준함과 성실함을 바탕으로, 맡은 바를 책임감 있게 완수하며 함께 일하는 동료들에게 신뢰를 주는 개발자가 되고 싶습니다.
-                </p>
+        <!--
+            SECTION 3: 자기소개 및 강점
+            - 텍스트 중심의 자기소개 섹션입니다.
+            - 가독성을 높이기 위해 차분한 배경과 적절한 타이포그래피를 사용합니다.
+        -->
+        <section id="story" class="story-section">
+            <div class="container">
+                <h2 class="section-title">자기소개 및 강점</h2>
+                <div class="story-content">
+                    <p>
+                        안녕하세요. 새로운 기술을 배우고 적용하는 과정에서 즐거움을 느끼는 신입 개발자 김지훈입니다.
+                        저는 복잡한 문제를 만났을 때, 이를 여러 개의 작은 단위로 나누어 체계적으로 접근하는 것을 즐깁니다.
+                        이러한 저의 문제 해결 방식은 교내 알고리즘 스터디와 팀 프로젝트를 통해 더욱 견고해졌습니다.
+                    </p>
+                    <p>
+                        특히 '미니 블로그 서비스' 프로젝트에서는 백엔드 개발을 맡아 데이터베이스를 설계하고 API를 구현했습니다.
+                        팀원들과의 적극적인 소통을 통해 기술적인 어려움을 함께 해결하고 성공적으로 프로젝트를 완수했던 경험은
+                        저에게 '함께 성장하는 가치'를 깨닫게 해주었습니다. 저는 혼자 빠르게 가는 것보다, 동료와 함께 멀리 가는 것의 중요성을 믿습니다.
+                    </p>
+                    <p>
+                        저의 강점은 꾸준함과 긍정적인 태도입니다. 어려운 과제 앞에서도 포기하지 않고, 해결책을 찾을 때까지 파고드는 끈기가 있습니다.
+                        항상 사용자의 입장에서 더 나은 경험을 제공하기 위해 고민하며, 깨끗하고 효율적인 코드를 작성하기 위해 노력합니다.
+                        저의 성실함과 기술에 대한 열정으로 귀사에 기여하고 싶습니다.
+                    </p>
+                </div>
             </div>
         </section>
+    </main>
 
-    </div>
+    <!--
+        사이트의 푸터 영역입니다.
+        간단한 저작권 정보를 포함합니다.
+    -->
+    <footer class="site-footer-bottom">
+        <div class="container">
+            <p>&copy; 2025 Jihun Kim. All rights reserved.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
